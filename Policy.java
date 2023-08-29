@@ -10,7 +10,7 @@ public class Policy {
    
    public Policy()
    {
-      PolicyNumber = "";
+      PolicyNumber = 0;
       ProviderName = "";
       PolicyHolderFirstName = "";
       PolicyHolderLastName = "";
@@ -21,14 +21,14 @@ public class Policy {
    }
    
    public Policy(
-      String policyNumber;
-      String providerName;
-      String firstName;
-      String lastName;
-      int age;
-      String smokingStatus;
-      double height;
-      double weight;
+      int policyNumber,
+      String providerName,
+      String firstName,
+      String lastName,
+      int age,
+      String smokingStatus,
+      double height,
+      double weight
    )
    {
       PolicyNumber = policyNumber;
@@ -43,7 +43,7 @@ public class Policy {
    
    public double CalculateBMI()
    {
-      return (PolicyHolderWeight * 703) / Math.Pow(PolicyHolderHeight, 2);
+      return (PolicyHolderWeight * 703) / Math.pow(PolicyHolderHeight, 2);
    }
    
    public double CalculatePolicyPrice()
@@ -54,11 +54,13 @@ public class Policy {
       if (PolicyHolderAge > 50)
          additionalFee += 75;
 
-      if (String.equals(PolicyHolderSmokingStatus, "smoker"))
+      if (PolicyHolderSmokingStatus.equals("smoker"))
          additionalFee += 100;
          
       double BMI = CalculateBMI();
       if (BMI > 35)
          additionalFee += (BMI - 35) * 20;
+         
+      return baseFee + additionalFee;
    }
 }
