@@ -43,20 +43,20 @@ public class Policy {
    
    public double CalculateBMI()
    {
-      @param PolicyHolderWeight The weight of the policy holder
-      @param PolicyHolderHeight The height of the policy holder
+      //@param PolicyHolderWeight The weight of the policy holder;
+      //@param PolicyHolderHeight The height of the policy holder;
    
-      @return Returns the BMI of the policy holder
+      //@return Returns the BMI of the policy holder;
       return (PolicyHolderWeight * 703) / Math.pow(PolicyHolderHeight, 2);
    }
    
    public double CalculatePolicyPrice()
    {
-      @param baseFee The base fee of the policy
-      @param additionalFee The additional fees based on the policy holder
-      @param PolicyHolderAge The age of the policy holder
-      @param PolicyHolderSmokingStatus The smoking status of the policy holder
-      @param BMI The BMI of the policy holder
+      //@param baseFee The base fee of the policy;
+      //@param additionalFee The additional fees based on the policy holder;
+      //@param PolicyHolderAge The age of the policy holder;
+      //@param PolicyHolderSmokingStatus The smoking status of the policy holder;
+      //@param BMI The BMI of the policy holder;
    
       double baseFee = 600;
       double additionalFee = 0;
@@ -71,7 +71,7 @@ public class Policy {
       if (BMI > 35)
          additionalFee += (BMI - 35) * 20;
          
-      @return Returns the policy price based on base fee and additional fees
+      //@return Returns the policy price based on base fee and additional fees;
       return baseFee + additionalFee;
    }
 }
