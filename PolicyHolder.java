@@ -47,7 +47,8 @@ public class PolicyHolder {
                "\nPolicyholder's Last Name: " + PolicyHolderLastName +
                "\nPolicyholder's Age: " + PolicyHolderAge +
                "\nPolicyholder's Smoking Status: " + PolicyHolderSmokingStatus +
-               "\nPolicyholder's Height: " + PolicyHolderHeight + " inches"
-               "\nPolicyholder's Weight: " + PolicyHolderWeight + " pounds";
+               "\nPolicyholder's Height: " + PolicyHolderHeight + " inches" +
+               "\nPolicyholder's Weight: " + PolicyHolderWeight + " pounds" +
+               "\nPolicyholder's BMI: " + String.format("%,.2f", CalculateBMI());
     }
 }

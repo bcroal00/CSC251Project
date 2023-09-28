@@ -1,6 +1,7 @@
 public class Policy {
    public int PolicyNumber;
    public String ProviderName;
+   public PolicyHolder PolicyHolder;
       
    public static int PolicyCount = 0;
       
@@ -14,11 +15,18 @@ public class Policy {
    
    public Policy(
       int policyNumber,
-      String providerName
+      String providerName,
+      String firstName,
+      String lastName,
+      int age,
+      String smokingStatus,
+      double height,
+      double weight
    )
    {
       PolicyNumber = policyNumber;
       ProviderName = providerName;
+      PolicyHolder = new PolicyHolder(firstName, lastName, age, smokingStatus, height, weight);
       
       PolicyCount++;
    }
@@ -34,13 +42,13 @@ public class Policy {
       double baseFee = 600;
       double additionalFee = 0;
       
-      if (PolicyHolderAge > 50)
+      if (PolicyHolder.PolicyHolderAge > 50)
          additionalFee += 75;
 
-      if (PolicyHolderSmokingStatus.equals("smoker"))
+      if (PolicyHolder.PolicyHolderSmokingStatus.equals("smoker"))
          additionalFee += 100;
          
-      double BMI = CalculateBMI();
+      double BMI = PolicyHolder.CalculateBMI();
       if (BMI > 35)
          additionalFee += (BMI - 35) * 20;
          
