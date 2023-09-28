@@ -42,4 +42,12 @@ public class PolicyHolder {
       return (PolicyHolderWeight * 703) / Math.pow(PolicyHolderHeight, 2);
    }
 
+   public String toString() {
+        return "Policyholder's First Name: " + PolicyHolderFirstName +
+               "\nPolicyholder's Last Name: " + PolicyHolderLastName +
+               "\nPolicyholder's Age: " + PolicyHolderAge +
+               "\nPolicyholder's Smoking Status: " + PolicyHolderSmokingStatus +
+               "\nPolicyholder's Height: " + PolicyHolderHeight + " inches"
+               "\nPolicyholder's Weight: " + PolicyHolderWeight + " pounds";
+    }
 }
