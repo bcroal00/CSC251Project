@@ -9,7 +9,7 @@ public class Project_Brent_Croal
       
       try 
       {
-         File file = new File("C:\\Users\\brent\\Documents\\GitHub\\bcroal00\\CSC251Project\\PolicyInformation.txt");
+         File file = new File("C:\\Users\\brent\\Documents\\GitHub\\CSC251Project\\PolicyInformation.txt");
              
          Scanner inputFile = new Scanner(file);
          
