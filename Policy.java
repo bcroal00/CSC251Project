@@ -1,55 +1,22 @@
 public class Policy {
    public int PolicyNumber;
    public String ProviderName;
-   public String PolicyHolderFirstName;
-   public String PolicyHolderLastName;
-   public int PolicyHolderAge;
-   public String PolicyHolderSmokingStatus;
-   public double PolicyHolderHeight;
-   public double PolicyHolderWeight;
-   
+      
    public Policy()
    {
       PolicyNumber = 0;
-      ProviderName = "";
-      PolicyHolderFirstName = "";
-      PolicyHolderLastName = "";
-      PolicyHolderAge = 0;
-      PolicyHolderSmokingStatus = "";
-      PolicyHolderHeight = 0.0;
-      PolicyHolderWeight = 0.0;
+      ProviderName = "";s
    }
    
    public Policy(
       int policyNumber,
-      String providerName,
-      String firstName,
-      String lastName,
-      int age,
-      String smokingStatus,
-      double height,
-      double weight
+      String providerName
    )
    {
       PolicyNumber = policyNumber;
       ProviderName = providerName;
-      PolicyHolderFirstName = firstName;
-      PolicyHolderLastName = lastName;
-      PolicyHolderAge = age;
-      PolicyHolderSmokingStatus = smokingStatus;
-      PolicyHolderHeight = height;
-      PolicyHolderWeight = weight;
    }
-   
-   public double CalculateBMI()
-   {
-      //@param PolicyHolderWeight The weight of the policy holder;
-      //@param PolicyHolderHeight The height of the policy holder;
-   
-      //@return Returns the BMI of the policy holder;
-      return (PolicyHolderWeight * 703) / Math.pow(PolicyHolderHeight, 2);
-   }
-   
+         
    public double CalculatePolicyPrice()
    {
       //@param baseFee The base fee of the policy;
