@@ -2,10 +2,14 @@ public class Policy {
    public int PolicyNumber;
    public String ProviderName;
       
+   public static int PolicyCount = 0;
+      
    public Policy()
    {
       PolicyNumber = 0;
-      ProviderName = "";s
+      ProviderName = "";
+      
+      PolicyCount++;
    }
    
    public Policy(
@@ -15,6 +19,8 @@ public class Policy {
    {
       PolicyNumber = policyNumber;
       ProviderName = providerName;
+      
+      PolicyCount++;
    }
          
    public double CalculatePolicyPrice()
