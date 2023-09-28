@@ -41,4 +41,9 @@ public class Policy {
       //@return Returns the policy price based on base fee and additional fees;
       return baseFee + additionalFee;
    }
+   
+   public String toString() {
+      return "Policy Number: " + PolicyNumber +
+              "\nProvider Name: " + ProviderName;
+   }
 }
